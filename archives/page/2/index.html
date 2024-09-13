@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="cn">
     <!-- title -->
-
-
-    
-
 <!-- keywords -->
-
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="author" content="Nutcracker">
     <meta name="renderer" content="webkit">
     <meta name="copyright" content="Nutcracker">
-    
         <meta name="keywords" content="Android,Live,Nutcracker">
-    
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
@@ -29,7 +20,6 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
-    
     <title>Base Station</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -152,7 +142,7 @@
 
     header,
     footer,
-    .back-top,
+    .footer-fixed-btn,
     .sidebar,
     .container,
     .site-intro-meta,
@@ -175,7 +165,13 @@
         left: 0;
         width: calc(100% + 300px);
         height: 100%;
-        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background: repeating-linear-gradient(
+            -45deg,
+            #444 0,
+            #444 80px,
+            #333 80px,
+            #333 160px
+        );
         background-position: center center;
         transform: translate3d(-226px, 0, 0);
         animation: gradient-move 2.5s ease-out 0s infinite;
@@ -191,22 +187,18 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
-    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link id="stylesheet-fancybox" rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link id="stylesheet-base" rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link id="stylesheet-mobile" rel="preload" href="/css/mobile.css" as="style" onload="this.onload=null;this.rel='stylesheet';this.media='screen and (max-width: 960px)'">
+    <link id="stylesheet-theme-dark" rel="preload" href="/css/dark.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/main.js" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
     <!-- algolia -->
-    
     <!-- 百度统计  -->
-    
     <!-- 谷歌统计  -->
-    
+    <!-- Google tag (gtag.js) -->
 <meta name="generator" content="Hexo 5.4.2"></head>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -216,21 +208,16 @@
             document.write('<script src="/lib/jquery.min.js" />')
         }
     </script>
-    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
     <div class="header-element">
-        <div class="read-progress"></div>
+        <div class="read-progress read-progress-feature"></div>
     </div>
     <!-- sidebar menu button -->
     <div class="header-element">
-        
-            <div class="header-sidebar-menu">
-        
-            
-                <div style="padding-left: 1px;">&#xe775;</div>
-            
+        <div class="header-sidebar-menu">
+            <div style="padding-left: 1px;">&#xe775;</div>
         </div>
     </div>
     <!-- header actions -->
@@ -241,56 +228,46 @@
         </span>
         <!-- back to home page text -->
         <span class="home-link header-element">
-            <a href=/>Base Station</a>
+            <a href="/">Base Station</a>
         </span>
     </div>
-    <!-- toggle banner for post layout -->
-    
+    <!-- toggle banner -->
+    <div class="banner">
+        <div class="blog-title header-element">
+            <a href="/">Base Station</a>
+        </div>
+        <div class="post-title header-element">
+            <a href="#" class="post-name"></a>
+        </div>
+    </div>
 </header>
 
         <!-- fixed footer -->
         <footer class="footer-fixed">
+    <!-- donate button -->
+
     <!-- back to top button -->
-    <div class="footer-fixed-element">
-        
-            <div class="back-top back-top-hidden">
-        
-        
-            <div>&#xe639;</div>
-        
-        </div>
+    <div class="footer-fixed-btn footer-fixed-btn--hidden back-top">
+        <div>&#xe639;</div>
     </div>
 </footer>
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="site-intro" style="
-
-
-
-
-
-
-
-">
-    
+            <div class="site-intro" style="">
     <!-- 主页  -->
-            
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
-            
         </p>
         <!-- 文章页 meta -->
-        
     </div>
 </div>
 
@@ -417,19 +394,38 @@
   )
 </script>
 
-            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" alt="loading">
             <div class="container container-unloaded">
                 <main class="main index-page">
-    
-        
-        
-        
-        
             
-        
+        <article class="index-post">
+            <a class="abstract-title" href="/2018/05/26/2018-05-06-gradle_learning_notes_2/">
+                <span class="abstract-title-text">Gradle的架构和api</span>
+            </a>
+            <div class="abstract-content">
+                了解 Gradle 的架构
+每个 Gradle 构架都包括了三个基本的构建块:项目(Projects)、任务(tasks)、和属性(properties),每个构建至少包括一个项目,项目包括一个或多个任务,项目中有很多属性来控制构建过程.
+Gradle 运用了领域驱动的设计理念（DDD）来给自己的领域构建软件建模，因此 Gradle 的项目和任务都在 Gradle 的 API 中有一个直接的 class 来表示，接下来我们来深入了解每一个组件和它对应的 API。
+
+ProjectProject 表示你想要构建的一个目标，对应具体的内容可以是一个项目、组件、jar 等。当开始构建的时候，G...
+            </div>
+            <!-- read more -->
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2024/09/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/26</span>
+                </div>
+                <!-- tags -->
+                    <div class="abstract-tags" >
+        <a class="post-tag" href="javascript:void(0);" data-tags="Gradle">Gradle</a>
+</div>
+
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+            
         <article class="index-post">
             <a class="abstract-title" href="/2018/04/28/2018-05-26-gradle_learning_notes_1/">
-                
                 <span class="abstract-title-text">Gradle的基础概念</span>
             </a>
             <div class="abstract-content">
@@ -438,35 +434,22 @@
 Groovy 是...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/28</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Gradle">Gradle</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2018/04/19/2018-04-19-memory_management/">
-                
                 <span class="abstract-title-text">Android 内存管理机制</span>
             </a>
             <div class="abstract-content">
@@ -475,35 +458,22 @@ Android 系统虽然是基于 Linux 2.6 内核开发的开源操作系统，但�
 内存分配Android 系统会对每个进程的 Dalvik 设置了严格的 Heap 使用限制，如果应用达到内存限制容量后仍然继续申请内存就...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/19</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2018/04/01/2018-04-04-andorid_thread/">
-                
                 <span class="abstract-title-text">Android 的线程和线程池</span>
             </a>
             <div class="abstract-content">
@@ -512,35 +482,22 @@ ThreadLoacalThreadLocal 是一个线程内部的数据存储类，通过它可�
 ThreadLoacal 的另一个使用场景是复杂逻辑下的对象传递，例如监听器，有些时候一个线程中的任务过于复杂，这可能表现为函数调用栈比较深以及入口的多样性，在这种情况下使用 ThreadLocal 可以让监听器作为线程内的全局对象存在，只要在当前线程，就可以通过 ge...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/01</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2018/03/25/2018-03-25-andorid_view_working_principle/">
-                
                 <span class="abstract-title-text">Android View 工作原理</span>
             </a>
             <div class="abstract-content">
@@ -548,37 +505,23 @@ ThreadLoacal 的另一个使用场景是复杂逻辑下的对象传递，例如�
 12root =new ViewRootImpl(view.getContext(),display);root.se...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/25</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="Note">Note</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2018/03/19/2018-03-19-andorid_view_event/">
-                
                 <span class="abstract-title-text">Android View 事件体系</span>
             </a>
             <div class="abstract-content">
@@ -592,37 +535,23 @@ ACTION_MOVE 手指在屏幕上滑动
 ...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/19</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="Note">Note</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2018/03/18/2018-03-18-andorid_ipc/">
-                
                 <span class="abstract-title-text">Android IPC 机制</span>
             </a>
             <div class="abstract-content">
@@ -630,37 +559,23 @@ ACTION_MOVE 手指在屏幕上滑动
 为什么需要多进程通信，使用场景前面也有说在操作系统中一个进程对应的指一个程序或者应用，当两个应用需要数据交互的时候就必须要采取夸进程的通信方式来获取所需要的数据。在 Android ...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/18</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="Note">Note</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2018/03/15/2018-03-15-andorid_exploration_book_read_01/">
-                
                 <span class="abstract-title-text">Android 艺术开发探索笔记</span>
             </a>
             <div class="abstract-content">
@@ -669,37 +584,23 @@ activity a 启动 activity b 然后返回activity a 再返回到桌面 它们的
 A onCreate —&gt; A onStart —&gt; A onResume —&gt; 跳转 —&gt; A onPause —&gt; B onCreate —&gt; B onStart —&gt; B onResume —&gt; A onStop —&gt; 返回 —&gt; B onPsuse —&gt;  A onRestart —&gt;  A onStart —&gt; A onResume —&gt; ...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/15</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="Note">Note</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2017/05/19/2017-05-19-android_databinding/">
-                
                 <span class="abstract-title-text">Data Binding学习笔记</span>
             </a>
             <div class="abstract-content">
@@ -707,37 +608,23 @@ A onCreate —&gt; A onStart —&gt; A onResume —&gt; 跳转 —&gt; A onPause
 什么是 DataBinding?简单的来说 DataBinding 是 Google 在 Android 上的一种 MVVM 的实现。MVVM 是Model-View-ViewModel的简写，它是 MVP(Model-View-Persenter) 模式与 WPF 结合的应用方式发展演变过来的一种新型架构。而 ...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/05/19</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="Booklet">Booklet</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-        
         <article class="index-post">
             <a class="abstract-title" href="/2017/03/08/2017-03-08-adapter/">
-                
                 <span class="abstract-title-text">适配器模式与外观模式</span>
             </a>
             <div class="abstract-content">
@@ -749,165 +636,49 @@ A onCreate —&gt; A onStart —&gt; A onResume —&gt; 跳转 —&gt; A onPause
 还记得第一节课的Duck吗，我们可以通过...
             </div>
             <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
+                <div class="abstract-date" title="Last updated: 2024/09/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/08</span>
                 </div>
                 <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
+                    <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="基础">基础</a>
-    
 </div>
 
-                
             </div>
         </article>
         <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2017/02/20/2017-02-20-factory/">
-                
-                <span class="abstract-title-text">工厂模式(factory Pettern)</span>
-            </a>
-            <div class="abstract-content">
-                前言一看日期吓一跳，已经一周多没有写笔记了。除了懒之外还是懒….其实之前认真思考过，是否应该花大量的时间去排版笔记去写 bolg，想想还是应该写下去，除了给予自己反馈增加自己的动力确实能让自己学习到的东西再梳理一遍增加知识在脑袋里的存储时间。
-正文工厂模式无论是在平时开发还是各种源码中都经常出现的，它细分为三种 :
-
-简单工厂
-工厂方法
-抽象工厂
-
-虽然分类较多，不过具体的作用都是将对象创建的过程封装起来，以便将代码从具体类解耦。重点介绍较为复杂的抽象工厂，简单工厂和工厂发方法我们应该在平时都经常用到，很容易理解。
-简单工厂那么我们先来实现一个小目标吧，比如说，开一个 🍕 披萨店！
-披...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/18">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/02/20</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="基础">基础</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
-    
         <nav class="page-nav">
             <a class="extend prev" rel="prev" href="/archives/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT &gt;</a>
         </nav>
-    
 </main>
 
                 <!-- profile -->
-                
             </div>
             <footer class="footer footer-unloaded">
     <!-- social  -->
-    
         <div class="social">
-            
-    
-        
-            
-                <a href="mailto:mrchenzhaojun@gmail.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/czj-dev" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <a href="https://www.zhihu.com/people/chen-zhao-jun-27" class="iconfont-archer zhihu" target="_blank" title=zhihu></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <a href="https://steamcommunity.com/id/Mr9527/" class="iconfont-archer steam" target="_blank" title=steam></a>
-            
-        
-    
-        
-    
-        
-    
-
+                            <a href="mailto:mrchenzhaojun@gmail.com" class="iconfont-archer email" title="email" ></a>
+                <a href="//github.com/czj-dev" class="iconfont-archer github" target="_blank" title="github"></a>
+                <a href="https://www.zhihu.com/people/chen-zhao-jun-27" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
+                <a href="https://steamcommunity.com/id/NutcrackerX" class="iconfont-archer steam" target="_blank" title="steam"></a>
 
         </div>
-    
     <!-- powered by Hexo  -->
     <div class="copyright">
         <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
     </div>
     <!-- website approve for Chinese user -->
-    
     <!-- 不蒜子  -->
-    
         <div class="busuanzi-container">
-            
-             
                 <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
-            
         </div>
-    	
 </footer>
 
         </div>
         <!-- toc -->
-        
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
@@ -918,7 +689,6 @@ A onCreate —&gt; A onStart —&gt; A onResume —&gt; 跳转 —&gt; A onPause
     <div class="sidebar-content sidebar-content-show-archive">
         <div class="sidebar-panel-archives">
     <!-- 在 ejs 中将 archive 按照时间排序 -->
-    
         
         
         
@@ -946,572 +716,199 @@ A onCreate —&gt; A onStart —&gt; A onResume —&gt; 跳转 —&gt; A onPause
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 26
+        Total : 27
         </div>
         <!-- search  -->
-        
     </div>
-    
     <div class="post-archive">
-    
-        
-            
-            
+            <div class="archive-year"> 2024 </div>
+            <ul class="year-list">
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/13</span>
+            <a class="archive-post-title" href="/2024/09/13/2024-09-13-program_developer_experience/">程序员修炼知道</a>
+        </li>
+                </ul>
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
-            
-        
         <li class="archive-post-item">
             <span class="archive-post-date">02/22</span>
             <a class="archive-post-title" href="/2023/02/22/2023-02-20-android_preload_review/">Android 列表预加载分析</a>
         </li>
-    
-        
-            
-            
-                
                 </ul>
-            
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
-            
-        
         <li class="archive-post-item">
             <span class="archive-post-date">03/24</span>
             <a class="archive-post-title" href="/2021/03/24/2021-03-25-thinking/">庸碌</a>
         </li>
-    
-        
-            
-            
-                
                 </ul>
-            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
-            
-        
         <li class="archive-post-item">
             <span class="archive-post-date">05/22</span>
             <a class="archive-post-title" href="/2020/05/22/2020-05-22-note_wiki_widget/">官方文档的重要性</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">05/11</span>
             <a class="archive-post-title" href="/2020/05/11/2020-05-11-flutter_depth/">Flutter 深入探索</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">04/30</span>
             <a class="archive-post-title" href="/2020/04/30/2020-04-30-dart_basic/">Dart 实践（一）</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">04/29</span>
             <a class="archive-post-title" href="/2020/04/29/2020-04-29-book_read_01/">《精进：如何成为一个很厉害的人》阅读笔记 01</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">04/27</span>
             <a class="archive-post-title" href="/2020/04/27/2020-04-27-flutter_application/">Flutter 实践</a>
         </li>
-    
-        
-            
-            
-                
                 </ul>
-            
             <div class="archive-year"> 2019 </div>
             <ul class="year-list">
-            
-        
         <li class="archive-post-item">
             <span class="archive-post-date">10/15</span>
             <a class="archive-post-title" href="/2019/10/15/2019-10-15-retrofit-and-okHttp/">Retrofit与OkHttp源码解析</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">10/11</span>
             <a class="archive-post-title" href="/2019/10/11/2019-10-11-HTTP_The_Definitive_Guide/">HTTP 权威指南阅读笔记（一）</a>
         </li>
-    
-        
-            
-            
-                
                 </ul>
-            
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
-            
-        
         <li class="archive-post-item">
             <span class="archive-post-date">05/26</span>
             <a class="archive-post-title" href="/2018/05/26/2018-05-06-gradle_learning_notes_2/">Gradle的架构和api</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">04/28</span>
             <a class="archive-post-title" href="/2018/04/28/2018-05-26-gradle_learning_notes_1/">Gradle的基础概念</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>
             <a class="archive-post-title" href="/2018/04/19/2018-04-19-memory_management/">Android 内存管理机制</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span>
             <a class="archive-post-title" href="/2018/04/01/2018-04-04-andorid_thread/">Android 的线程和线程池</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">03/25</span>
             <a class="archive-post-title" href="/2018/03/25/2018-03-25-andorid_view_working_principle/">Android View 工作原理</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">03/19</span>
             <a class="archive-post-title" href="/2018/03/19/2018-03-19-andorid_view_event/">Android View 事件体系</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">03/18</span>
             <a class="archive-post-title" href="/2018/03/18/2018-03-18-andorid_ipc/">Android IPC 机制</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">03/15</span>
             <a class="archive-post-title" href="/2018/03/15/2018-03-15-andorid_exploration_book_read_01/">Android 艺术开发探索笔记</a>
         </li>
-    
-        
-            
-            
-                
                 </ul>
-            
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
-            
-        
         <li class="archive-post-item">
             <span class="archive-post-date">05/19</span>
             <a class="archive-post-title" href="/2017/05/19/2017-05-19-android_databinding/">Data Binding学习笔记</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">03/08</span>
             <a class="archive-post-title" href="/2017/03/08/2017-03-08-adapter/">适配器模式与外观模式</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">02/20</span>
             <a class="archive-post-title" href="/2017/02/20/2017-02-20-factory/">工厂模式(factory Pettern)</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">02/08</span>
             <a class="archive-post-title" href="/2017/02/08/2017-02-08-decorator/">装饰者模式(Decorator)</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">02/07</span>
             <a class="archive-post-title" href="/2017/02/07/2017-02-07-observer/">观察者模式(Observer Pettern)</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">02/06</span>
             <a class="archive-post-title" href="/2017/02/06/2017-02-06-annotation/">Android自定义注解</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">02/04</span>
             <a class="archive-post-title" href="/2017/02/04/2017-02-04-Strategy/">策略模式(Strategy Pettern)</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">01/24</span>
             <a class="archive-post-title" href="/2017/01/24/2017-01-24-rxjava_learning_notes/">RxAndroid学习笔记</a>
         </li>
-    
-        
         <li class="archive-post-item">
             <span class="archive-post-date">01/23</span>
             <a class="archive-post-title" href="/2017/01/23/2017-01-23-new_start/">Hello Blog</a>
         </li>
-    
+            </ul>
     </div>
 </div>
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
-        
             <span class="sidebar-tag-name" data-tags="生活">
                 <span class="iconfont-archer">&#xe606;</span>
                 生活
             </span>
-        
             <span class="sidebar-tag-name" data-tags="Android">
                 <span class="iconfont-archer">&#xe606;</span>
                 Android
             </span>
-        
             <span class="sidebar-tag-name" data-tags="基础">
                 <span class="iconfont-archer">&#xe606;</span>
                 基础
             </span>
-        
             <span class="sidebar-tag-name" data-tags="Booklet">
                 <span class="iconfont-archer">&#xe606;</span>
                 Booklet
             </span>
-        
             <span class="sidebar-tag-name" data-tags="Note">
                 <span class="iconfont-archer">&#xe606;</span>
                 Note
             </span>
-        
             <span class="sidebar-tag-name" data-tags="Gradle">
                 <span class="iconfont-archer">&#xe606;</span>
                 Gradle
             </span>
-        
-            <span class="sidebar-tag-name" data-tags="HTTP">
-                <span class="iconfont-archer">&#xe606;</span>
-                HTTP
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="Flutter">
                 <span class="iconfont-archer">&#xe606;</span>
                 Flutter
             </span>
-        
-            <span class="sidebar-tag-name" data-tags="Book">
-                <span class="iconfont-archer">&#xe606;</span>
-                Book
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="Dart">
                 <span class="iconfont-archer">&#xe606;</span>
                 Dart
             </span>
-        
+            <span class="sidebar-tag-name" data-tags="Book">
+                <span class="iconfont-archer">&#xe606;</span>
+                Book
+            </span>
             <span class="sidebar-tag-name" data-tags="RecyclerView">
                 <span class="iconfont-archer">&#xe606;</span>
                 RecyclerView
             </span>
-        
+            <span class="sidebar-tag-name" data-tags="HTTP">
+                <span class="iconfont-archer">&#xe606;</span>
+                HTTP
+            </span>
+            <span class="sidebar-tag-name" data-tags="方法论">
+                <span class="iconfont-archer">&#xe606;</span>
+                方法论
+            </span>
+            <span class="sidebar-tag-name" data-tags="读书笔记">
+                <span class="iconfont-archer">&#xe606;</span>
+                读书笔记
+            </span>
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -1522,7 +919,6 @@ A onCreate —&gt; A onStart —&gt; A onResume —&gt; 跳转 —&gt; A onPause
 
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
-    
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
     <div class="sidebar-categories-list"></div>
@@ -1546,25 +942,36 @@ A onCreate —&gt; A onStart —&gt; A onResume —&gt; 跳转 —&gt; A onPause
 
         <!-- import experimental options here -->
         <!-- Custom Font -->
-
+    <!-- Check browser compatibility of CSS variables -->
+    <script>
+        if (browserSupportCSSVariables === undefined) {
+            var browserSupportCSSVariables = window.CSS && window.CSS.supports && window.CSS.supports('--a', 0);
+        }
+    </script>
+    <script>
+        if (browserSupportCSSVariables) {
+            var customFontName = 'Noto Sans SC:n3,n4,n5,n7'
+            var customFontUrl = 'https://fonts.googleapis.cnpmjs.org/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap'
+            if (!customFontName) {
+                console.log('Custom font name is not set or read failed');
+            }
+            if (!customFontUrl) {
+                console.log('Custom font url is not set or read failed');
+            }
+        } else {
+            console.error('Current browser doesn\'t support custom font.')
+        }
+    </script>
+    <script src="/scripts/customFontLoader.js" defer></script>
 
         <!-- main func -->
-        <script src="/scripts/main.js?v=20211217"></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v=20211217"></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js" onload="window.Fancybox.bind('[data-fancybox]')" defer></script>
         <!-- algolia -->
-        
         <!-- busuanzi -->
-        
             <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
-        
-        <!-- CNZZ -->
-        
         <!-- async load share.js -->
-        
         <!-- mermaid -->
-        
     </body>
 </html>
